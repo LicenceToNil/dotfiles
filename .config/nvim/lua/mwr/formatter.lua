@@ -46,6 +46,15 @@ require('formatter').setup({
           }
         end
     },
+    json = {
+       function()
+          return {
+            exe = "prettier",
+            args = {"--stdin-filepath", vim.api.nvim_buf_get_name(0)},
+            stdin = true
+          }
+        end
+    },
     css = {
        function()
           return {
@@ -64,12 +73,21 @@ require('formatter').setup({
           }
         end
     },
+    rust = {
+      function()
+        return {
+          exe = "rustfmt",
+          args = {"--emit=stdout"},
+          stdin = true
+        }
+      end
+    },
   }
 })
 
 vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.js,*.ts,*.tsx,*.html,*.svelte,*.css,*.scss FormatWrite
+  autocmd BufWritePost *.js,*.ts,*.tsx,*.html,*.svelte,*.css,*.scss,*.json,*.astro,*.rs FormatWrite
 augroup END
 ]], true)

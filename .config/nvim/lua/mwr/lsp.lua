@@ -27,7 +27,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 -- Use a loop to conveniently both setup defined servers 
 -- and map buffer local keybindings when the language server attaches
-local servers = { "tsserver", "cssls",  "svelte", "html" }
+local servers = { "tsserver", "cssls",  "svelte", "html", "jsonls", "rls"}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
