@@ -1,10 +1,7 @@
-alias la='ls -lAFh --color=auto'   #long list,show almost all,show type,human readable
-alias lr='ls -tRFh --color=auto'   #sorted by date,recursive,show type,human readable
+alias la='LC_COLLATE=C ls -lAFh --color=auto'   #long list,show almost all,show type,human readable
 alias lt='ls -ltFh --color=auto'   #long list,sorted by date,show type,human readable
 alias ll='ls -l --color=auto'      #long list
 alias ldot='ls -ld .*'
-# alias la='exa -la'   
-# alias ll='exa -laD'   
 alias zshrc="vim ~/.config/zsh/.zshrc"
 alias vrc="vim ~/.config/nvim/init.vim"
 alias dotgit="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
