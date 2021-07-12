@@ -53,7 +53,7 @@ require'compe'.setup {
     buffer = true;
     nvim_lsp = true;
     nvim_lua = true;
-    vsnip = false;
+    vsnip = true;
     calc = false;
     ultisnips = false;
     treesitter = false;

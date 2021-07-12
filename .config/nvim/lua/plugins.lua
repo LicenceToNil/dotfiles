@@ -16,7 +16,7 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
   use 'tpope/vim-repeat'
-  -- use 'tpope/vim-eunuch'
+  use 'tpope/vim-eunuch'
   use 'numtostr/FTerm.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
